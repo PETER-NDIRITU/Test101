@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Thuku</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var typedElement = document.querySelector('.typed');
+      var cursorElement = document.querySelector('.cursor');
+      var typedItems = ['A Geospatial Developer', ' A Remote Sensing Expert', ' A Freelancer'];
+      var typingIdx = 0;
+      var wordIdx = 0;
+      var currentWord = '';
+      var isDeleting = false;
+    
+      function type() {
+        var word = typedItems[wordIdx];
+        if (!isDeleting) {
+          currentWord = word.substring(0, currentWord.length + 1);
+        } else {
+          currentWord = word.substring(0, currentWord.length - 1);
+        }
+        typedElement.textContent = currentWord;
+    
+        if (!isDeleting && currentWord === word) {
+          isDeleting = true;
+          setTimeout(type, 1500); // Wait before deleting
+        } else if (isDeleting && currentWord === '') {
+          isDeleting = false;
+          wordIdx = (wordIdx + 1) % typedItems.length;
+          setTimeout(type, 500); // Wait before typing next word
+        } else {
+          setTimeout(type, 100); // Typing speed
+        }
+      }
+    
+      type(); // Start typing
+    });
+    </script>
+    
+<body style="background-color: #272829;">
+
+    <div class="topnav">
+        <a href="#contacts">Contacts</a> &nbsp;&nbsp;
+        <a href="#resume">Resume</a>&nbsp;&nbsp;
+        <a href="https://medium.com/@thukupeter487">Portfolio</a>&nbsp;&nbsp;
+        <a href="#">About</a>
+        <!-- <a href="#home">Home</a> -->
+      </div>
+
+      <br><br><br><br>
+
+     <div style="width: 100%;">
+        <div class="div2">
+            <img src="E:\PrOjEcTs\V2_Portfolio_2024\ProfilePicture.jpg" class="img1">
+
+         </div>
+         <div class="div1">
+            <br><br><br><h1 style="color: aliceblue;">Hello, I'm Peter Thuku.</h1>
+            <br>
+           <p><span class="typed"></span></p>
+           <br><br><br>
+
+         <a href="#"><button style="background-color: rgb(82, 172, 224); padding: 10px; border-radius: 10px;">Download my CV</button></a> 
+ <br><br><br><br><br><br><br>
+ <div class="socials">
+      <a href="https://twitter.com/P_Ndiritu_Thuku" class="fa fa-twitter" style="font-size: 20px; color: blue;"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.facebook.com/profile.php?id=100090674814412" class="fa fa-facebook" style="font-size: 20px; color: blue;"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.instagram.com/its_peter_n/" class="fa fa-instagram" style="font-size: 20px; color: red;"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://wa.link/dre90b" class="fa fa-whatsapp" style="font-size: 20px; color: green;"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.linkedin.com/in/peter-ndiritu-thuku-a45a81255/" class="fa fa-linkedin" style="font-size: 20px; color: blue;"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://medium.com/@thukupeter487" class="fa fa-medium" style="font-size: 20px; color: black;"></a>
+    </div>
+         </div>
+
+    </div>
+
+ 
+
+      
+    
+      <div class="footer">
+<h3> &copy; Peter Thuku &nbsp; 2024 </h3>
+</div>
+
+</body>
+</html>
